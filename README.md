@@ -1,4 +1,4 @@
-# Multi-Task-Audio-Analyzer
+# AudioCompass
 
 An ML-powered Streamlit app that:
 
