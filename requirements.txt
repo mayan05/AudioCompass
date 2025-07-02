@@ -1,6 +1,8 @@
 streamlit
 librosa
+fastapi
 numpy
 scipy
 scikit-learn
-resampy 
+resampy
+requests 
