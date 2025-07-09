@@ -1,0 +1,6 @@
+deep - G ionian -> 14
+G major - G aeolian -> 3
+C ionian - E major -> 5
+G dorian - g dorian -> 1
+G minor - g minor -> 1
+A mixo - Hard Rock⧸Wild⧸Majestic -> 17
