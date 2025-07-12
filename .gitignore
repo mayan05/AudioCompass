@@ -5,3 +5,6 @@
 /dataset
 /trimmed_audio_mp3
 /remaining_tracks
+/.venv
+/features.npy
+/label.npy
