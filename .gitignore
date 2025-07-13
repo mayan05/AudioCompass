@@ -8,3 +8,4 @@
 /.venv
 /features.npy
 /label.npy
+/cmd_seq.txt
