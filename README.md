@@ -60,7 +60,9 @@ Here are some example results from the model evaluation and testing:
 ```bash
 pip install -r requirements.txt
 
+
 ### 2️⃣ Run the app
+```bash
 streamlit run app.py
 
 ### 3️⃣ Upload an audio file and view predictions.
