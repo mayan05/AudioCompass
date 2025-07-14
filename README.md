@@ -10,7 +10,6 @@ To develop a machine learning–powered audio analyzer that can accurately:
 
 - 🎼 Detect the **musical key & scale** (e.g., C Major, A♯ Minor)
 - 🎵 Estimate the **tempo (BPM)** of a track
-- 🎙️ Classify the **general type of audio** (e.g., music, speech, ambient, mechanical)
 
 …all from a single audio file using a **shared feature learning model**, deployed as an interactive **Streamlit application**.
 
