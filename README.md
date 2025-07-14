@@ -59,11 +59,12 @@ Here are some example results from the model evaluation and testing:
 ### 1️⃣ Install dependencies
 ```bash
 pip install -r requirements.txt
-
+```
 
 ### 2️⃣ Run the app
 ```bash
 streamlit run app.py
+```
 
 ### 3️⃣ Upload an audio file and view predictions.
 
@@ -78,5 +79,5 @@ Librosa 🎧
 Scikit-learn 🔬
 
 
-📄 License
+## 📄 License
 MIT License © 2025
