@@ -11,16 +11,19 @@ def trim_and_extract_features(file: UploadFile, chunk_duration=15, sample_rate=2
     mp3_path = None
     try:
         # Save the uploaded file to a temporary location
-        suffix = os.path.splitext(file.filename)[1] or ".mp3" # Use .mp3 if no suffix to ensure pydub compatibility
+        suffix = os.path.splitext(file.filename)[1]
         with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp_file:
             shutil.copyfileobj(file.file, tmp_file)
             temp_audio_file_path = tmp_file.name
 
-        # Convert to mp3 directly within the function
-        # Define output path for the MP3 file
-        mp3_path = tempfile.NamedTemporaryFile(delete=False, suffix=".mp3").name
-        audio = AudioSegment.from_file(temp_audio_file_path)
-        audio.export(mp3_path, format="mp3")
+        # Check if the file is already an MP3
+        if suffix.lower() == ".mp3":
+            mp3_path = temp_audio_file_path
+        else:
+            # Convert to mp3 if not already mp3
+            mp3_path = tempfile.NamedTemporaryFile(delete=False, suffix=".mp3").name
+            audio = AudioSegment.from_file(temp_audio_file_path)
+            audio.export(mp3_path, format="mp3")
         
         y, sr = librosa.load(mp3_path, sr=sample_rate)
         chunk_length = int(chunk_duration * sr)
@@ -40,5 +43,6 @@ def trim_and_extract_features(file: UploadFile, chunk_duration=15, sample_rate=2
         # Clean up temporary files
         if temp_audio_file_path and os.path.exists(temp_audio_file_path):
             os.remove(temp_audio_file_path)
-        if mp3_path and os.path.exists(mp3_path):
+        # Only delete mp3_path if it's a newly created file, not if it's the original temp_audio_file_path
+        if mp3_path and os.path.exists(mp3_path) and mp3_path != temp_audio_file_path:
             os.remove(mp3_path)
