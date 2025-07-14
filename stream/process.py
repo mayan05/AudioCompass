@@ -29,6 +29,7 @@ def trim_and_extract_features(file: UploadFile, chunk_duration=15, sample_rate=2
         chunk_length = int(chunk_duration * sr)
         total_samples = len(y)
         input_features = []
+        
         for start in range(0, total_samples, chunk_length):
             end = min(start + chunk_length, total_samples)
             chunk = y[start:end]
@@ -39,6 +40,7 @@ def trim_and_extract_features(file: UploadFile, chunk_duration=15, sample_rate=2
             log_S = librosa.power_to_db(S, ref=np.max)
             input_features.append(log_S)
         return np.array(input_features)
+    
     finally:
         # Clean up temporary files
         if temp_audio_file_path and os.path.exists(temp_audio_file_path):
