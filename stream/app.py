@@ -23,7 +23,9 @@ if anal_check:
                     answer = response.json()
                     prediction = answer.get("prediction", {})
                     label = prediction.get("label", "Unknown")
+                    tempo = prediction.get("tempo")
                     st.success(f"✅ Predicted Key & Scale: **{label}**")
+                    st.success(f"✅ Predicted Tempo      : **{tempo}**")
 
                 else:
                     st.error(f"❌ Server returned status code {response.status_code}: {response.text}")

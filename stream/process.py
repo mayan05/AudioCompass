@@ -26,6 +26,7 @@ def trim_and_extract_features(file: UploadFile, chunk_duration=15, sample_rate=2
             audio.export(mp3_path, format="mp3")
         
         y, sr = librosa.load(mp3_path, sr=sample_rate)
+        tempo, _ = librosa.beat.beat_track(y=y, sr=sr)
         chunk_length = int(chunk_duration * sr)
         total_samples = len(y)
         input_features = []
@@ -39,7 +40,7 @@ def trim_and_extract_features(file: UploadFile, chunk_duration=15, sample_rate=2
             S = librosa.feature.melspectrogram(y=chunk, sr=sr, n_mels=n_mels)
             log_S = librosa.power_to_db(S, ref=np.max)
             input_features.append(log_S)
-        return np.array(input_features)
+        return (np.array(input_features), tempo)
     
     finally:
         # Clean up temporary files

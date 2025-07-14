@@ -46,15 +46,13 @@ class2idx = {
 @app.post('/predict')
 async def analyse(file: UploadFile):
     try:
-        features = trim_and_extract_features(file)
+        features, tempo = trim_and_extract_features(file)
         features = tensor(features,dtype=torch.float32).unsqueeze(1)
         features = features.to(next(model.parameters()).device)
         prediction = model.predict(features) 
         label = class2idx[prediction] 
 
-        return JSONResponse(status_code=200, content={"prediction": {"index": prediction,"label": label}})
-
-        ## HANDLE RESPONSE HERE !!!
+        return JSONResponse(status_code=200, content={"prediction": {"index": prediction,"label": label,"tempo":round(float(tempo))}})
         
     except Exception as e:
         return JSONResponse(status_code=500, content={"error": str(e)})
