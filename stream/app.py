@@ -26,6 +26,7 @@ if anal_check:
                     tempo = prediction.get("tempo")
                     st.success(f"✅ Predicted Key & Scale: **{label}**")
                     st.success(f"✅ Predicted Tempo      : **{tempo}**")
+                                     # tempo hehe
 
                 else:
                     st.error(f"❌ Server returned status code {response.status_code}: {response.text}")

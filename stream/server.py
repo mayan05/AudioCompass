@@ -53,7 +53,7 @@ async def analyse(file: UploadFile):
         label = class2idx[prediction] 
 
         return JSONResponse(status_code=200, content={"prediction": {"index": prediction,"label": label,"tempo":round(float(tempo))}})
-        
+                                                                                                        # tempo hehe
     except Exception as e:
         return JSONResponse(status_code=500, content={"error": str(e)})
 

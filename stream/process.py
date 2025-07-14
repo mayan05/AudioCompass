@@ -35,12 +35,13 @@ def trim_and_extract_features(file: UploadFile, chunk_duration=15, sample_rate=2
             end = min(start + chunk_length, total_samples)
             chunk = y[start:end]
             if len(chunk) < chunk_length:
-                # Pad the last chunk if it's shorter than chunk_length
+                # Pad the last chunk if it's shorter than chunk_le
                 chunk = np.pad(chunk, (0, chunk_length - len(chunk)))
             S = librosa.feature.melspectrogram(y=chunk, sr=sr, n_mels=n_mels)
             log_S = librosa.power_to_db(S, ref=np.max)
             input_features.append(log_S)
         return (np.array(input_features), tempo)
+                                        # tempo hehe
     
     finally:
         # Clean up temporary files
