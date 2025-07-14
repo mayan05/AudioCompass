@@ -65,7 +65,8 @@ streamlit run app.py
 
 ### 3️⃣ Upload an audio file and view predictions.
 
-🛠️ Technologies Used
+
+## 🛠️ Technologies Used
 PyTorch
 
 Streamlit 📈
