@@ -8,3 +8,5 @@ resampy
 requests
 pydub
 ffmpeg-python 
+python-multipart
+tensorboard

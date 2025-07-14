@@ -3,7 +3,7 @@ import traceback
 from tqdm import tqdm
 from pydub import AudioSegment
 
-def trim_audio_to_chunks(input_folder, output_folder, chunk_duration=15, overlap=0):
+def trim_dataset(input_folder, output_folder, chunk_duration=15, overlap=0):
     os.makedirs(output_folder, exist_ok=True)
     audio_extensions = {'.wav', '.mp3', '.webm'}
     audio_files = []
@@ -47,4 +47,4 @@ def trim_audio_to_chunks(input_folder, output_folder, chunk_duration=15, overlap
 input_folder = "./remaining_tracks"
 output_folder = "./trimmed_audio_mp3"
 
-trim_audio_to_chunks(input_folder, output_folder, chunk_duration=15)
+trim_dataset(input_folder, output_folder, chunk_duration=15)

@@ -4,8 +4,10 @@
 /scale_&_key_dataset.zip
 /dataset
 /trimmed_audio_mp3
+/trimmed_audio_mp3.zip
 /remaining_tracks
 /.venv
 /features.npy
 /label.npy
 /cmd_seq.txt
+/myenv
