@@ -33,8 +33,6 @@ To develop a machine learning–powered audio analyzer that can accurately:
 ✅ Predicts:
   1. 🎼 Musical **key & scale**
   2. 🎵 **Tempo (BPM)**
-  
-✅ Visualizes audio features and predictions with interactive graphs.
 
 ---
 
