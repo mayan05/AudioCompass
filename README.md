@@ -71,17 +71,17 @@ streamlit run app.py
 ---
 
 ## 🛠️ Technologies Used
--**PyTorch🔥**-
+**PyTorch🔥**
 
--**Streamlit 📈**-
+**Streamlit 📈**
 
--**Librosa 🎧**-
+**Librosa 🎧**
 
--**Scikit-learn 🔬**-
+**Scikit-learn 🔬**
 
--**FastAPI 🍃**-
+**FastAPI 🍃**
 
--**Numpy 🔢**-
+**Numpy 🔢**
 
 ---
 
