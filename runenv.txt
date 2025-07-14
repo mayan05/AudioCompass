@@ -1,3 +1,0 @@
-myenv\Scripts\Activate.ps1
-
-run that above command in powershell before starting on the project

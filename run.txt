@@ -1,0 +1,5 @@
+myenv\Scripts\Activate.ps1  ,run in powershell before starting on the project
+
+uvicorn server:app --reload --port 8000 , activates fastapi server
+
+streamlit run app.py , running streamlit app

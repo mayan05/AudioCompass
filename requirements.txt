@@ -10,3 +10,6 @@ pydub
 ffmpeg-python 
 python-multipart
 tensorboard
+pandas 
+seaborn
+matplotlib
