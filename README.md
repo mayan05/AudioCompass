@@ -58,29 +58,29 @@ Here are some example results from the model evaluation and testing:
 
 ### 1️⃣ Clone the repository and navigate to the project directory
 
-bash
+```bash
 git clone https://github.com/RahulAnand2077/AudioCompass.git
 cd AudioCompass
-
+```
 
 ### 2️⃣ Install dependencies
 
-bash
+```bash
 pip install -r requirements.txt
 cd stream
-
+```
 
 ### 3️⃣ Run the Streamlit app
 
-bash
+```bash
 streamlit run app.py
-
+```
 
 ### 4️⃣ Run the FastAPI backend server
 
-bash
+```bash
 uvicorn stream.server:app --reload --port 8000
-
+```
 
 ### 5️⃣ Upload an audio file and view predictions.
 
