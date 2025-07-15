@@ -13,3 +13,5 @@ tensorboard
 pandas 
 seaborn
 matplotlib
+uvicorn
+gunicorn
