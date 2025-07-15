@@ -12,4 +12,3 @@ python-multipart
 pandas 
 uvicorn
 gunicorn
-torch-cpu
