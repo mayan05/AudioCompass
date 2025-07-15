@@ -59,7 +59,7 @@ Here are some example results from the model evaluation and testing:
 ### 1️⃣ Clone the repository and navigate to the project directory
 
 ```bash
-git clone https://github.com/RahulAnand2077/AudioCompass.git
+git clone https://github.com/mayan05/AudioCompass.git
 cd AudioCompass
 ```
 
@@ -103,10 +103,10 @@ uvicorn stream.server:app --reload --port 8000
 
 ## ✨ Contributors
 
-- *Rahul Anand*
-  - GitHub: [https://github.com/RahulAnand2077](https://github.com/RahulAnand2077)
-  - Email: [rahulcollege27@gmail.com](mailto:rahulcollege27@gmail.com)
-
 - *Mayan Sequeira*
   - GitHub: [https://github.com/mayan05](https://github.com/mayan05)
   - Email: [mayan.sequeira@gmail.com](mailto:mayan.sequeira@gmail.com)
+
+- *Rahul Anand*
+  - GitHub: [https://github.com/RahulAnand2077](https://github.com/RahulAnand2077)
+  - Email: [rahulcollege27@gmail.com](mailto:rahulcollege27@gmail.com)
