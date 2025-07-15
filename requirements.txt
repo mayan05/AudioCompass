@@ -10,8 +10,6 @@ pydub
 ffmpeg-python 
 python-multipart
 pandas 
-seaborn
-matplotlib
 uvicorn
 gunicorn
 torch
