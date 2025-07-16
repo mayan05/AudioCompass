@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-fastapi_url = "https://audiocompass-production.up.railway.app" # THE FASTAPI SERVER IS LIVE
+fastapi_url = "https://audiocompass-production.up.railway.app/" # THE FASTAPI SERVER IS LIVE
 
 st.title("🎵 Audio Compass")
 
@@ -16,7 +16,7 @@ if anal_check:
         with st.spinner("⏳ Sending file to server and analysing…"):
             try:
                 response = requests.post(
-                    url=f"{fastapi_url}/predict",
+                    url=f"{fastapi_url}predict",
                     files={"file": audio_file}
                 )
                 if response.status_code == 200:
