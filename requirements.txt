@@ -12,3 +12,7 @@ python-multipart
 pandas 
 uvicorn
 gunicorn
+torch
+pandas 
+matplotlib
+seaborn
