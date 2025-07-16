@@ -1,9 +1,9 @@
 from fastapi import FastAPI, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from .process import trim_and_extract_features
+from process import trim_and_extract_features
 from torch import device, cuda, load, tensor
-from .torch_model import CNN_LSTM_Model_PyTorch as cnn
+from torch_model import CNN_LSTM_Model_PyTorch as cnn
 import torch
 
 try:
@@ -22,7 +22,7 @@ except Exception as e:
 app = FastAPI(title='server')
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://attractive-achievement-production.up.railway.app/"],
+    allow_origins=["https://audiocompass.streamlit.app/"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]
