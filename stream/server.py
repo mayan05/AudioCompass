@@ -22,7 +22,7 @@ except Exception as e:
 app = FastAPI(title='server')
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://audiocompass.streamlit.app/"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]
