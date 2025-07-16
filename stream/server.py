@@ -22,7 +22,7 @@ except Exception as e:
 app = FastAPI(title='server')
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://attractive-achievement-production.up.railway.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]

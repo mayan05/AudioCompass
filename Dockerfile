@@ -21,4 +21,4 @@ COPY stream/ stream/
 EXPOSE 8000
 
 # Command to run the application using Gunicorn
-CMD ["uvicorn", "stream.server:app", "--workers", "1", "--worker-class", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:8000"] 
+CMD ["uvicorn", "stream.server:app", "--workers", "1", "--factory", "--host", "0.0.0.0", "--port", "8000"] 
