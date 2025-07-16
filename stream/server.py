@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from .process import trim_and_extract_features
 from torch import device, cuda, load, tensor
-from torch_model import CNN_LSTM_Model_PyTorch as cnn
+from .torch_model import CNN_LSTM_Model_PyTorch as cnn
 import torch
 
 try:

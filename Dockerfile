@@ -17,6 +17,7 @@ COPY best_model.pt .
 # Copy the application code
 COPY stream/ stream/
 
+ENV PYTHONPATH /app
 # Expose the port your application will run on
 EXPOSE 8000
 
