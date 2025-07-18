@@ -1,15 +1,15 @@
 from fastapi import FastAPI, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from process import trim_and_extract_features
+from .process import trim_and_extract_features
 from torch import device, cuda, load, tensor
-from torch_model import CNN_LSTM_Model_PyTorch as cnn
+from .torch_model import CNN_LSTM_Model_PyTorch as cnn
 import torch
 
 try:
     chip = device("cuda" if cuda.is_available() else "cpu")
     model = cnn(num_classes=24).to(chip)
-    model.load_state_dict(load('../best_model.pt', map_location=chip))
+    model.load_state_dict(load('stream/best_model.pt', map_location=chip))
     model.eval() # kept on evaluation mode
     print("The model has been loaded successfully!")
 except FileNotFoundError:
@@ -42,6 +42,15 @@ class2idx = {
     20 : 'A# Major', 21 : 'A# Minor',
     22 : 'B Major',  23 : 'B Minor',
 }
+
+@app.get("/")
+@app.head("/")
+async def read_root():
+    """
+    Health check endpoint for the API.
+    Returns a simple status message to indicate the API is running.
+    """
+    return {"status": "ok", "message": "Audio Compass API is running!"}
 
 @app.post('/predict')
 async def analyse(file: UploadFile):

@@ -12,3 +12,10 @@
 /cmd_seq.txt
 /myenv
 /run.txt
+/.ipynb_checkpoints/main_torch-checkpoint.ipynb
+/.ipynb_checkpoints/models_1-checkpoint.ipynb
+/modelStats/acctrain.csv
+/modelStats/accval.csv
+/modelStats/losstrain.csv
+/modelStats/lossval.csv
+/modelStats/results.ipynb
