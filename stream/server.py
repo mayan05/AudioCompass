@@ -43,6 +43,14 @@ class2idx = {
     22 : 'B Major',  23 : 'B Minor',
 }
 
+@app.get("/")
+async def read_root():
+    """
+    Health check endpoint for the API.
+    Returns a simple status message to indicate the API is running.
+    """
+    return {"status": "ok", "message": "Audio Compass API is running!"}
+
 @app.post('/predict')
 async def analyse(file: UploadFile):
     try:
