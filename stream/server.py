@@ -9,7 +9,7 @@ import torch
 try:
     chip = device("cuda" if cuda.is_available() else "cpu")
     model = cnn(num_classes=24).to(chip)
-    model.load_state_dict(load('../best_model.pt', map_location=chip))
+    model.load_state_dict(load('stream/best_model.pt', map_location=chip))
     model.eval() # kept on evaluation mode
     print("The model has been loaded successfully!")
 except FileNotFoundError:

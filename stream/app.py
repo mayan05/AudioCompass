@@ -1,7 +1,8 @@
 import streamlit as st
 import requests
 
-fastapi_url = "http://localhost:8000/" # THE FASTAPI SERVER IS LIVE
+# fastapi_url = "http://localhost:8000/" # THE FASTAPI SERVER IS LIVE
+fastapi_url = "https://audiocompass-1ovq.onrender.com"
 
 st.title("🎵 Audio Compass")
 
