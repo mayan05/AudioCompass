@@ -44,6 +44,7 @@ class2idx = {
 }
 
 @app.get("/")
+@app.head("/")
 async def read_root():
     """
     Health check endpoint for the API.
